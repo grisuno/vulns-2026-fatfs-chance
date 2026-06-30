@@ -33,7 +33,7 @@ Name) and GPT partition support.
 Because FatFs is small, self-contained, and permissively licensed, it has
 become the de-facto standard FAT implementation for microcontroller firmware.
 The library is vendored verbatim into official SDKs, RTOSes, bootloaders, and
-application frameworks — meaning a single upstream vulnerability propagates to
+application frameworks - meaning a single upstream vulnerability propagates to
 every downstream project that copied `ff.c`.
 
 ## Major Projects
@@ -106,11 +106,11 @@ verification of its update container *prior* to mounting it with FatFs.
 
 ### Attacker Value by CVE
 
-**CVE-2026-6682 — Integer overflow leading to attacker-controlled read length**
+**CVE-2026-6682 - Integer overflow leading to attacker-controlled read length**
 
 By crafting a FAT32 volume with a specific field set to overflow, an attacker can cause
 a victim device to read an attacker-chosen number of attacker-chosen bytes into a fixed
-buffer — a direct path to code execution. On bare-metal embedded targets the exploit is
+buffer - a direct path to code execution. On bare-metal embedded targets the exploit is
 deterministic and requires no heap spray, no brute force, and no information leak as a
 prerequisite.
 
@@ -119,7 +119,7 @@ that means physical access to swap an SD card. Devices that accept firmware upda
 over a network, or that trust the integrity of an update package only after FatFs has
 already parsed it, are exploitable remotely.
 
-**CVE-2026-6683 — Divide-by-zero in exFAT sync**
+**CVE-2026-6683 - Divide-by-zero in exFAT sync**
 
 An attacker who can deliver a crafted exFAT volume to a device running pre-R0.16 FatFs
 can guarantee a crash on any subsequent write. FatFs R0.16 added a partial mount-time
@@ -134,7 +134,7 @@ any write or sync operation. The evil-SD-card scenario covers most embedded devi
 for remote exploitation the target's OTA pipeline must accept and mount an
 attacker-supplied image without first verifying its integrity.
 
-**CVE-2026-6684 — Infinite loop in GPT partition scan**
+**CVE-2026-6684 - Infinite loop in GPT partition scan**
 
 Delivering a GPT disk image with a single field set to its maximum value causes the
 target to loop reading disk sectors until power is removed. Against bootloaders and
@@ -147,13 +147,13 @@ target must be running a pre-R0.16 FatFs build with 64-bit LBA support enabled. 
 that bootloaders are the most attractive targets here precisely because they tend to
 have no watchdog and no recovery path.
 
-**CVE-2026-6685 — Integer underflow → out-of-bounds write on fragmented volumes**
+**CVE-2026-6685 - Integer underflow → out-of-bounds write on fragmented volumes**
 
 By formatting a storage medium so that file clusters are not laid out in order, an
 attacker can cause an out-of-bounds memory write during normal file I/O. The written
 data is attacker-controlled if the attacker also controls the medium. On bare-metal
-targets without memory protection this write is silent — no error, no crash, no log
-entry — and corruption only surfaces as misbehavior later. On targets with an MMU the
+targets without memory protection this write is silent - no error, no crash, no log
+entry - and corruption only surfaces as misbehavior later. On targets with an MMU the
 out-of-bounds write may instead trigger a fault, making the bug visible but still
 denying service.
 
@@ -162,7 +162,7 @@ the target to perform interleaved reads and writes on a file stored on that volu
 long-running devices the fragmentation condition can also arise naturally over time,
 making this exploitable without any special filesystem preparation.
 
-**CVE-2026-6686 — Stale cluster data readable after seek past EOF**
+**CVE-2026-6686 - Stale cluster data readable after seek past EOF**
 
 When a file is extended by seeking past its end, FatFs does not zero the newly
 allocated storage. Any data previously written to those sectors by a deleted file is
@@ -174,7 +174,7 @@ content to a less-privileged reader.
 The attacker needs read access to a file on the target's FAT volume that was extended
 via a seek operation. This is primarily a local or physical-access scenario.
 
-**CVE-2026-6687 — Stack overflow via exFAT volume label**
+**CVE-2026-6687 - Stack overflow via exFAT volume label**
 
 Supplying an exFAT volume with an oversized label causes FatFs to overflow the caller's
 label buffer when the application calls `f_getlabel()`. ST's STM32CubeMX code generator
@@ -184,16 +184,16 @@ commercial STM32 firmware. On bare-metal Cortex-M devices without stack cookies 
 ASLR (the common case) this is a one-shot code execution primitive.
 
 The attacker needs the target to mount an exFAT volume they control and then call
-`f_getlabel()`. The FatFs library does not call this internally — the application must
+`f_getlabel()`. The FatFs library does not call this internally - the application must
 call it explicitly. Most projects do so as part of their own mount-time initialization,
 requiring no further attacker interaction in practice for those projects.
 
-**CVE-2026-6688 — Buffer overflow via long LFN filename in directory listing**
+**CVE-2026-6688 - Buffer overflow via long LFN filename in directory listing**
 
 By placing a file with a long name in a FAT directory, an attacker can overflow the
 buffer a calling application uses to store that name when iterating the directory. The
 overflow is proportional to the filename length, up to 255 bytes. This vulnerability
-is in calling code, not in FatFs itself, so impact varies by target — but any
+is in calling code, not in FatFs itself, so impact varies by target - but any
 application that iterates a directory and copies filenames into a fixed-size buffer
 without checking the length is affected.
 
@@ -206,9 +206,9 @@ major distribution.
 
 Seven distinct bugs were identified in FatFs R0.16 and earlier versions.
 
-### CVE-2026-6682 — FAT32 integer overflow in `mount_volume()` → attacker-controlled `finfo.fsize`
+### CVE-2026-6682 - FAT32 integer overflow in `mount_volume()` → attacker-controlled `finfo.fsize`
 
-**Location:** `ff.c` `mount_volume()` — `fasize *= fs->n_fats`
+**Location:** `ff.c` `mount_volume()` - `fasize *= fs->n_fats`
 
 A DWORD multiply overflow occurs when `BPB_FATSz32` is crafted to produce a
 large value.  With `BPB_FATSz32 = 0x80000001` and `NumFATs = 2`:
@@ -224,24 +224,24 @@ a fake directory entry at the overlapping sector, causing `f_stat()` to return
 an attacker-controlled `finfo.fsize`.  Any application that then calls
 `f_read(fp, buf, finfo.fsize, &br)` without bounding the count against
 `sizeof(buf)` overflows the destination buffer with fully attacker-controlled
-bytes — a direct path to RCE.
+bytes - a direct path to RCE.
 
 **Worst-case impact:** Remote code execution (heap or stack overflow) on any
 embedded device that reads a file size from FatFs and uses it as a read length.
 
 ---
 
-### CVE-2026-6683 — Division-by-zero in `sync_fs()` (exFAT)
+### CVE-2026-6683 - Division-by-zero in `sync_fs()` (exFAT)
 
-**Location:** `ff.c` `sync_fs()` — `(n_fatent - 2 - free_clst) * 100 / (n_fatent - 2)`
+**Location:** `ff.c` `sync_fs()` - `(n_fatent - 2 - free_clst) * 100 / (n_fatent - 2)`
 
 When `BPB_NumClusEx = 0`, `n_fatent = 2`, making the divisor `(n_fatent - 2) = 0`.
 This is reached on any write or sync operation to a crafted exFAT volume,
 producing a SIGFPE / hard-fault and crashing the target.
 
 FatFs R0.16 partially guards against this at mount time (bitmap-cluster
-validation fails when `NumClusEx = 0`).  Older versions — R0.14b (ArduPilot,
-Mbed OS), R0.15 (RIOT OS, STM32), R0.13c (MicroPython) — have no such guard
+validation fails when `NumClusEx = 0`).  Older versions - R0.14b (ArduPilot,
+Mbed OS), R0.15 (RIOT OS, STM32), R0.13c (MicroPython) - have no such guard
 and crash unconditionally.
 
 **Worst-case impact:** Denial of service / system crash on any write to a
@@ -249,9 +249,9 @@ crafted exFAT volume.  During an OTA update this can brick the device.
 
 ---
 
-### CVE-2026-6684 — Unbounded GPT partition scan loop in `find_volume()` (pre-R0.16)
+### CVE-2026-6684 - Unbounded GPT partition scan loop in `find_volume()` (pre-R0.16)
 
-**Location:** `ff.c` `find_volume()` — `for (i = 0; i < n_ent; i++) disk_read()`
+**Location:** `ff.c` `find_volume()` - `for (i = 0; i < n_ent; i++) disk_read()`
 
 When `FF_LBA64 = 1`, `find_volume()` iterates over every GPT partition entry
 to search for an FAT partition.  In pre-R0.16 builds the loop count is taken
@@ -269,7 +269,7 @@ bricks the system.
 
 ---
 
-### CVE-2026-6685 — Stale dirty-cache skip via unsigned-subtraction wrap in `f_read()` / `f_write()`
+### CVE-2026-6685 - Stale dirty-cache skip via unsigned-subtraction wrap in `f_read()` / `f_write()`
 
 **Location:** `ff.c` lines ~4055, ~4171:
 
@@ -291,7 +291,7 @@ interleaved reads and writes; out-of-bounds heap/stack write.
 
 ---
 
-### CVE-2026-6686 — Uninitialized cluster data via `f_lseek()` beyond EOF
+### CVE-2026-6686 - Uninitialized cluster data via `f_lseek()` beyond EOF
 
 **Location:** `ff.c` `f_lseek()`:
 
@@ -304,7 +304,7 @@ if (!FF_FS_READONLY && fp->fptr > fp->obj.objsize) {
 
 Seeking past EOF calls `create_chain()` to allocate new clusters but never
 zeroes their sectors.  Any subsequent read of the extended region returns raw
-stale data — content from previously deleted files remaining in the recycled
+stale data - content from previously deleted files remaining in the recycled
 cluster.
 
 **Worst-case impact:** Information disclosure of deleted file content (old
@@ -313,7 +313,7 @@ over a connected interface.
 
 ---
 
-### CVE-2026-6687 — Stack buffer overflow in `f_getlabel()` via exFAT `XDIR_NumLabel`
+### CVE-2026-6687 - Stack buffer overflow in `f_getlabel()` via exFAT `XDIR_NumLabel`
 
 **Location:** `ff.c` `f_getlabel()`:
 
@@ -328,8 +328,8 @@ for (si = di = hs = 0; si < dj.dir[XDIR_NumLabel]; si++) {
 The exFAT specification limits `XDIR_NumLabel` to 11 characters.  FatFs reads
 this as a raw `BYTE` (0–255) with no validation.  A crafted volume with
 `XDIR_NumLabel = 128` causes `f_getlabel` to write 128 characters into the
-caller's buffer — typically `char label[12]` or `char label[24]` as generated
-by STM32CubeMX — overflowing the stack by up to 244 bytes.
+caller's buffer - typically `char label[12]` or `char label[24]` as generated
+by STM32CubeMX - overflowing the stack by up to 244 bytes.
 
 **Worst-case impact:** Stack buffer overflow in any caller of `f_getlabel()` on
 an exFAT volume.  The canonical vulnerable pattern (`char label[12]`) appears
@@ -337,10 +337,10 @@ in every project generated by STM32CubeMX, AN3224, and UM1721.
 
 ---
 
-### CVE-2026-6688 — Caller stack/heap overflow via long LFN filename
+### CVE-2026-6688 - Caller stack/heap overflow via long LFN filename
 
 **Root cause:** With `FF_USE_LFN` enabled, `f_readdir()` fills `fno.fname` with
-the full Long File Name — up to `FF_LFN_BUF` (255) characters.  Callers
+the full Long File Name - up to `FF_LFN_BUF` (255) characters.  Callers
 written for SFN-only operation use fixed-size path or name buffers (e.g.,
 `char path[16]`, `char name[14]`) and copy `fno.fname` without bounds
 checking.
@@ -457,22 +457,22 @@ dd if=harness/img/exploit_bug1_espidf.img of=/dev/sdX bs=512
 The test harness exercises all seven bugs with hand-crafted disk images built
 in memory, then confirms the vulnerable code path was reached:
 
-- **CVE-2026-6682** — builds a `BPB_FATSz32=0x80000001` FAT32 image, mounts it, and
+- **CVE-2026-6682** - builds a `BPB_FATSz32=0x80000001` FAT32 image, mounts it, and
   confirms `fs.database` falls inside the FAT region; then executes the full
   RCE chain (fake directory entry → `f_read` of planted function pointer →
   `rce_proof_of_execution()` called).
-- **CVE-2026-6683** — documents the `(n_fatent-2)` divisor and confirms the arithmetic
+- **CVE-2026-6683** - documents the `(n_fatent-2)` divisor and confirms the arithmetic
   path; checks that R0.16 rejects the image at mount time.
-- **CVE-2026-6684** — builds a `GPTH_PtNum=0xFFFFFFFF` GPT image and confirms that
+- **CVE-2026-6684** - builds a `GPTH_PtNum=0xFFFFFFFF` GPT image and confirms that
   R0.16 rejects it within ≤ 3 disk reads via `test_gpt_header()`.
-- **CVE-2026-6685** — evaluates the unsigned-subtract arithmetic with a concrete
+- **CVE-2026-6685** - evaluates the unsigned-subtract arithmetic with a concrete
   `(fp_sect=50, sect=200, cc=0xFFFFFFDF)` triple and demonstrates the guard
   evaluates `TRUE` (wrong) for an out-of-range cached sector.
-- **CVE-2026-6686** — pre-seeds all data clusters with `0xAA`, writes a short file,
+- **CVE-2026-6686** - pre-seeds all data clusters with `0xAA`, writes a short file,
   extends it via `f_lseek`, and reads back to confirm stale bytes are visible.
-- **CVE-2026-6687** — builds an exFAT image with `XDIR_NumLabel=128`, calls
+- **CVE-2026-6687** - builds an exFAT image with `XDIR_NumLabel=128`, calls
   `f_getlabel` into a probe buffer, and counts the overflow past byte 24.
-- **CVE-2026-6688** — constructs a FAT16 directory with a 50-char LFN, reads it via
+- **CVE-2026-6688** - constructs a FAT16 directory with a 50-char LFN, reads it via
   `f_readdir`, and confirms `fno.fname` length exceeds typical caller buffers.
 
 ---
@@ -488,7 +488,7 @@ typedef struct {
     uint8_t  fw_header[128];   // buffer the developer reads into
     uint32_t crc32;
     uint32_t version;
-    void   (*on_apply)(void);  // callback — attacker target
+    void   (*on_apply)(void);  // callback - attacker target
 } ota_ctx_t;
 ```
 
