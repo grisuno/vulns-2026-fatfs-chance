@@ -1,0 +1,25 @@
+{
+  "tool": "readmenator",
+  "generated_at": "2026-09-16T04:50:29Z",
+  "project_root": "/tmp/readmenator_vulns-2026-fatfs-chance_p0mi81jg",
+  "files": 27,
+  "symbols": 933,
+  "imports": 255,
+  "resolved_imports": 28,
+  "security_findings": 0,
+  "languages": {
+    "c": 17,
+    "h": 5,
+    "sh": 2,
+    "py": 1,
+    "go": 2
+  },
+  "entrypoints": [],
+  "start_here": "INDEX.md",
+  "workflow": [
+    "grep -n '<keyword>' INDEX.md",
+    "cat KB_<subsystem>.md",
+    "grep -n '<file>' ARCHITECTURE.md SYMBOLS.md"
+  ],
+  "regenerate": "readmenator . --rebuild"
+}
