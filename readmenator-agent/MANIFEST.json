@@ -1,0 +1,26 @@
+{
+  "tool": "readmenator",
+  "generated_at": "2026-09-17T04:57:53Z",
+  "project_root": "/tmp/push_vulns-2026-fatfs-chance_20260917_010128",
+  "files": 27,
+  "symbols": 762,
+  "imports": 255,
+  "resolved_imports": 28,
+  "security_findings": 0,
+  "languages": {
+    "c": 17,
+    "h": 5,
+    "sh": 2,
+    "py": 1,
+    "go": 2
+  },
+  "entrypoints": [],
+  "start_here": "INDEX.md",
+  "workflow": [
+    "ls *.md readmenator-*/  # orient: docs first, ignore build noise",
+    "grep -n '<keyword>' INDEX.md",
+    "cat KB_<subsystem>.md",
+    "grep -n '<file>' ARCHITECTURE.md SYMBOLS.md"
+  ],
+  "regenerate": "readmenator . --rebuild"
+}
