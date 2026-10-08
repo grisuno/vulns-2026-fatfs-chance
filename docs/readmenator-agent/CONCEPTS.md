@@ -1,0 +1,120 @@
+# Concepts
+
+Nouns map atomically to file sets (EXTRACTED); verbs aggregate structural edges (INFERRED).
+
+- `fat` | files=21 | mentions=61 | `FatFs-R0.16/documents/res/app1.c`, `FatFs-R0.16/documents/res/app2.c`, `FatFs-R0.16/documents/res/app3.c`, `FatFs-R0.16/documents/res/app4.c`, `FatFs-R0.16/documents/res/app5.c`, `FatFs-R0.16/documents/res/app6.c`, `FatFs-R0.16/source/diskio.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`
+- `size` | files=11 | mentions=62 | `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`
+- `image` | files=11 | mentions=56 | `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/run.sh`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`
+- `read` | files=11 | mentions=31 | `FatFs-R0.16/source/diskio.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`
+- `write` | files=11 | mentions=21 | `FatFs-R0.16/source/diskio.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`
+- `disk` | files=10 | mentions=48 | `FatFs-R0.16/source/diskio.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/run.sh`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `path` | files=10 | mentions=45 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/rce_demo.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `file` | files=10 | mentions=43 | `FatFs-R0.16/documents/res/app5.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/exploit_disks.c`, `harness/libfuzzer_harness.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `harness` | files=10 | mentions=16 | `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/ffunicode_stub.c`, `harness/libfuzzer_harness.c`, `harness/rce_demo.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `lfn` | files=9 | mentions=78 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `byte` | files=9 | mentions=50 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/test_harness.c`
+- `volume` | files=9 | mentions=34 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `sector` | files=8 | mentions=45 | `FatFs-R0.16/source/diskio.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `build` | files=8 | mentions=37 | `esp32-qemu-test/run.sh`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `code` | files=8 | mentions=37 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `FatFs-R0.16/source/ffunicode.c`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `bytes` | files=8 | mentions=28 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `data` | files=8 | mentions=18 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `entry` | files=8 | mentions=16 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/run.sh`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `overflow` | files=7 | mentions=13 | `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `partition` | files=7 | mentions=13 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `exfat` | files=7 | mentions=10 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `not` | files=7 | mentions=8 | `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/diskio_ramdisk.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `source` | files=7 | mentions=7 | `FatFs-R0.16/source/diskio.c`, `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `FatFs-R0.16/source/ffsystem.c`, `FatFs-R0.16/source/ffunicode.c`
+- `use` | files=6 | mentions=45 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `esp32-qemu-test/run.sh`, `fuzzer/fat_image.go`, `harness/test_ffconf.h`
+- `char` | files=6 | mentions=37 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/test_harness.c`
+- `get` | files=6 | mentions=36 | `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `fuzzer/fat_image.go`, `harness/diskio_ramdisk.c`
+- `label` | files=6 | mentions=34 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffconf.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/test_ffconf.h`
+- `fat16` | files=6 | mentions=29 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/test_harness.c`
+- `fat32` | files=6 | mentions=27 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/test_harness.c`
+- `return` | files=6 | mentions=24 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `harness/exploit_disks.c`, `harness/ffunicode_stub.c`, `harness/libfuzzer_harness.c`, `harness/rce_demo.c`
+- `cve` | files=6 | mentions=23 | `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`
+- `buf` | files=6 | mentions=19 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ffconf.h`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `name` | files=6 | mentions=17 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/test_harness.c`
+- `root` | files=6 | mentions=17 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `gpt` | files=6 | mentions=16 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ffconf.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `header` | files=6 | mentions=15 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `clus` | files=6 | mentions=14 | `FatFs-R0.16/source/ff.c`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `sfn` | files=6 | mentions=14 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ffconf.h`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/test_ffconf.h`, `harness/test_harness.c`
+- `mount` | files=6 | mentions=13 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `harness/exploit_disks.c`, `harness/libfuzzer_harness.c`
+- `only` | files=6 | mentions=11 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/run.sh`, `fuzzer/main.go`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `type` | files=6 | mentions=11 | `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `FatFs-R0.16/source/ffsystem.c`, `fuzzer/fat_image.go`, `harness/test_harness.c`
+- `entries` | files=6 | mentions=10 | `FatFs-R0.16/source/ff.c`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `fuzzer/fat_image.go`, `fuzzer/main.go`, `harness/exploit_disks.c`, `harness/test_harness.c`
+- `open` | files=6 | mentions=8 | `FatFs-R0.16/documents/res/app1.c`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/run.sh`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `documents` | files=6 | mentions=6 | `FatFs-R0.16/documents/res/app1.c`, `FatFs-R0.16/documents/res/app2.c`, `FatFs-R0.16/documents/res/app3.c`, `FatFs-R0.16/documents/res/app4.c`, `FatFs-R0.16/documents/res/app5.c`, `FatFs-R0.16/documents/res/app6.c`
+- `res` | files=6 | mentions=6 | `FatFs-R0.16/documents/res/app1.c`, `FatFs-R0.16/documents/res/app2.c`, `FatFs-R0.16/documents/res/app3.c`, `FatFs-R0.16/documents/res/app4.c`, `FatFs-R0.16/documents/res/app5.c`, `FatFs-R0.16/documents/res/app6.c`
+- `define` | files=5 | mentions=56 | `FatFs-R0.16/source/diskio.h`, `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `harness/rce_demo.c`
+- `must` | files=5 | mentions=36 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `esp32-qemu-test/run.sh`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `harness/exploit_disks.c`
+- `dir` | files=5 | mentions=34 | `FatFs-R0.16/source/ff.c`, `FatFs-R0.16/source/ff.h`, `harness/exploit_disks.c`, `harness/rce_demo.c`, `harness/test_harness.c`
+- `void` | files=5 | mentions=32 | `FatFs-R0.16/source/ff.h`, `harness/diskio_ramdisk.c`, `harness/diskio_ramdisk.h`, `harness/ffunicode_stub.c`, `harness/rce_demo.c`
+- `run` | files=5 | mentions=20 | `esp32-qemu-test/app/main/fatfs_vuln_test.c`, `esp32-qemu-test/run.sh`, `esp32-qemu-test/scripts/gen_exploit_image.py`, `esp32-qemu-test/scripts/run_test.sh`, `fuzzer/main.go`
+
+## Verb Edges
+
+- `fat` --depends_on--> `read` (strength 1.00)
+- `fat` --depends_on--> `size` (strength 1.00)
+- `fat` --depends_on--> `write` (strength 1.00)
+- `disk` --depends_on--> `read` (strength 0.89)
+- `disk` --depends_on--> `size` (strength 0.89)
+- `disk` --depends_on--> `write` (strength 0.89)
+- `fat` --depends_on--> `source` (strength 0.89)
+- `harness` --depends_on--> `read` (strength 0.89)
+- `harness` --depends_on--> `size` (strength 0.89)
+- `harness` --depends_on--> `write` (strength 0.89)
+- `read` --depends_on--> `size` (strength 0.89)
+- `read` --depends_on--> `write` (strength 0.89)
+- `write` --depends_on--> `read` (strength 0.89)
+- `write` --depends_on--> `size` (strength 0.89)
+- `fat` --depends_on--> `define` (strength 0.84)
+- `fat` --depends_on--> `file` (strength 0.84)
+- `fat` --depends_on--> `get` (strength 0.84)
+- `fat` --depends_on--> `type` (strength 0.84)
+- `bytes` --depends_on--> `read` (strength 0.79)
+- `bytes` --depends_on--> `size` (strength 0.79)
+- `bytes` --depends_on--> `write` (strength 0.79)
+- `size` --depends_on--> `read` (strength 0.79)
+- `size` --depends_on--> `write` (strength 0.79)
+- `data` --depends_on--> `read` (strength 0.74)
+- `data` --depends_on--> `size` (strength 0.74)
+- `data` --depends_on--> `write` (strength 0.74)
+- `file` --depends_on--> `read` (strength 0.74)
+- `file` --depends_on--> `size` (strength 0.74)
+- `file` --depends_on--> `write` (strength 0.74)
+- `read` --depends_on--> `fat` (strength 0.74)
+- `read` --depends_on--> `source` (strength 0.74)
+- `write` --depends_on--> `fat` (strength 0.74)
+- `write` --depends_on--> `source` (strength 0.74)
+- `disk` --depends_on--> `define` (strength 0.68)
+- `disk` --depends_on--> `fat` (strength 0.68)
+- `disk` --depends_on--> `file` (strength 0.68)
+- `disk` --depends_on--> `get` (strength 0.68)
+- `disk` --depends_on--> `source` (strength 0.68)
+- `disk` --depends_on--> `type` (strength 0.68)
+- `image` --depends_on--> `read` (strength 0.68)
+- `image` --depends_on--> `size` (strength 0.68)
+- `image` --depends_on--> `write` (strength 0.68)
+- `read` --depends_on--> `define` (strength 0.68)
+- `read` --depends_on--> `file` (strength 0.68)
+- `read` --depends_on--> `get` (strength 0.68)
+- `read` --depends_on--> `type` (strength 0.68)
+- `sector` --depends_on--> `read` (strength 0.68)
+- `sector` --depends_on--> `size` (strength 0.68)
+- `sector` --depends_on--> `write` (strength 0.68)
+- `write` --depends_on--> `define` (strength 0.68)
+
+## Dialectic
+
+- Thesis: `buf` centralizes 6 files; Antithesis: `byte` pulls 9 files with 4 shared (Jaccard 0.36); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `char` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `clus` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `code` pulls 8 files with 5 shared (Jaccard 0.56); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `data` pulls 8 files with 4 shared (Jaccard 0.40); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `dir` pulls 5 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `entries` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `entry` pulls 8 files with 4 shared (Jaccard 0.40); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `exfat` pulls 7 files with 6 shared (Jaccard 0.86); Synthesis: should they merge, split by layer, or keep `bridges` explicit?
+- Thesis: `buf` centralizes 6 files; Antithesis: `fat16` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?

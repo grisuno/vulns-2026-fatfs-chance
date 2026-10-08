@@ -1,0 +1,82 @@
+[
+  {
+    "community_a": 0,
+    "community_b": 1,
+    "connection_type": "depends_on",
+    "explanation": "Extracted import edge crosses communities: FatFs-R0.16/documents/res/app4.c imports FatFs-R0.16/source/ff.h.",
+    "strength": 0.9,
+    "confidence": "EXTRACTED"
+  },
+  {
+    "community_a": 2,
+    "community_b": 1,
+    "connection_type": "depends_on",
+    "explanation": "Extracted import edge crosses communities: harness/diskio_ramdisk.c imports FatFs-R0.16/source/ff.h.",
+    "strength": 0.9,
+    "confidence": "EXTRACTED"
+  },
+  {
+    "community_a": 2,
+    "community_b": 0,
+    "connection_type": "depends_on",
+    "explanation": "Extracted import edge crosses communities: harness/diskio_ramdisk.c imports FatFs-R0.16/source/diskio.h.",
+    "strength": 0.9,
+    "confidence": "EXTRACTED"
+  },
+  {
+    "community_a": 0,
+    "community_b": 1,
+    "connection_type": "bridges",
+    "explanation": "Inferred cross-community bridge: FatFs-R0.16/source/diskio.h reaches FatFs-R0.16/source/ffconf.h in 3 hops.",
+    "strength": 0.7,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 0,
+    "community_b": 1,
+    "connection_type": "bridges",
+    "explanation": "Inferred cross-community bridge: FatFs-R0.16/source/diskio.h reaches FatFs-R0.16/source/ffsystem.c in 3 hops.",
+    "strength": 0.7,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 0,
+    "community_b": 1,
+    "connection_type": "bridges",
+    "explanation": "Inferred cross-community bridge: FatFs-R0.16/source/diskio.h reaches FatFs-R0.16/source/ffunicode.c in 3 hops.",
+    "strength": 0.7,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 0,
+    "community_b": 1,
+    "connection_type": "bridges",
+    "explanation": "Inferred cross-community bridge: FatFs-R0.16/source/diskio.h reaches harness/ffunicode_stub.c in 3 hops.",
+    "strength": 0.7,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 0,
+    "community_b": 3,
+    "connection_type": "shares_context",
+    "explanation": "Inferred shared context (language c and layer utility) with no import path between community 0 (FatFs-R0.16/source: ff) and community 3 (orphans).",
+    "strength": 0.5,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 1,
+    "community_b": 3,
+    "connection_type": "shares_context",
+    "explanation": "Inferred shared context (language c and layer utility) with no import path between community 1 (FatFs-R0.16/source: ff) and community 3 (orphans).",
+    "strength": 0.5,
+    "confidence": "INFERRED"
+  },
+  {
+    "community_a": 2,
+    "community_b": 3,
+    "connection_type": "shares_context",
+    "explanation": "Inferred shared context (language c and layer utility) with no import path between community 2 (harness) and community 3 (orphans).",
+    "strength": 0.5,
+    "confidence": "INFERRED"
+  }
+]
