@@ -1,0 +1,2640 @@
+{
+  "concepts": [
+    {
+      "name": "fat",
+      "files": [
+        "FatFs-R0.16/documents/res/app1.c",
+        "FatFs-R0.16/documents/res/app2.c",
+        "FatFs-R0.16/documents/res/app3.c",
+        "FatFs-R0.16/documents/res/app4.c",
+        "FatFs-R0.16/documents/res/app5.c",
+        "FatFs-R0.16/documents/res/app6.c",
+        "FatFs-R0.16/source/diskio.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "FatFs-R0.16/source/ffsystem.c",
+        "FatFs-R0.16/source/ffunicode.c",
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 61,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "size",
+      "files": [
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 62,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "image",
+      "files": [
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 56,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "read",
+      "files": [
+        "FatFs-R0.16/source/diskio.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 31,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "write",
+      "files": [
+        "FatFs-R0.16/source/diskio.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 21,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "disk",
+      "files": [
+        "FatFs-R0.16/source/diskio.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/run.sh",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 48,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "path",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/rce_demo.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 45,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "file",
+      "files": [
+        "FatFs-R0.16/documents/res/app5.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/exploit_disks.c",
+        "harness/libfuzzer_harness.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 43,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "harness",
+      "files": [
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/ffunicode_stub.c",
+        "harness/libfuzzer_harness.c",
+        "harness/rce_demo.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 16,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "lfn",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 78,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "byte",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 50,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "volume",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 34,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "sector",
+      "files": [
+        "FatFs-R0.16/source/diskio.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 45,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "build",
+      "files": [
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 37,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "code",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "FatFs-R0.16/source/ffunicode.c",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 37,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "bytes",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 28,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "data",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 18,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "entry",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 16,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "overflow",
+      "files": [
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 13,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "partition",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 13,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "exfat",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 10,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "not",
+      "files": [
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/diskio_ramdisk.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "source",
+      "files": [
+        "FatFs-R0.16/source/diskio.c",
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "FatFs-R0.16/source/ffsystem.c",
+        "FatFs-R0.16/source/ffunicode.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "use",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "esp32-qemu-test/run.sh",
+        "fuzzer/fat_image.go",
+        "harness/test_ffconf.h"
+      ],
+      "mentions": 45,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "char",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 37,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "get",
+      "files": [
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "fuzzer/fat_image.go",
+        "harness/diskio_ramdisk.c"
+      ],
+      "mentions": 36,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "label",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffconf.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/test_ffconf.h"
+      ],
+      "mentions": 34,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fat16",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 29,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fat32",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/test_harness.c"
+      ],
+      "mentions": 27,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "return",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "harness/exploit_disks.c",
+        "harness/ffunicode_stub.c",
+        "harness/libfuzzer_harness.c",
+        "harness/rce_demo.c"
+      ],
+      "mentions": 24,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "cve",
+      "files": [
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c"
+      ],
+      "mentions": 23,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "buf",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ffconf.h",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 19,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "name",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/test_harness.c"
+      ],
+      "mentions": 17,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "root",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 17,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "gpt",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ffconf.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 16,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "header",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 15,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "clus",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 14,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "sfn",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ffconf.h",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/test_ffconf.h",
+        "harness/test_harness.c"
+      ],
+      "mentions": 14,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "mount",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "harness/exploit_disks.c",
+        "harness/libfuzzer_harness.c"
+      ],
+      "mentions": 13,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "only",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/run.sh",
+        "fuzzer/main.go",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 11,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "type",
+      "files": [
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c",
+        "fuzzer/fat_image.go",
+        "harness/test_harness.c"
+      ],
+      "mentions": 11,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "entries",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "fuzzer/fat_image.go",
+        "fuzzer/main.go",
+        "harness/exploit_disks.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 10,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "open",
+      "files": [
+        "FatFs-R0.16/documents/res/app1.c",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/run.sh",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "documents",
+      "files": [
+        "FatFs-R0.16/documents/res/app1.c",
+        "FatFs-R0.16/documents/res/app2.c",
+        "FatFs-R0.16/documents/res/app3.c",
+        "FatFs-R0.16/documents/res/app4.c",
+        "FatFs-R0.16/documents/res/app5.c",
+        "FatFs-R0.16/documents/res/app6.c"
+      ],
+      "mentions": 6,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "res",
+      "files": [
+        "FatFs-R0.16/documents/res/app1.c",
+        "FatFs-R0.16/documents/res/app2.c",
+        "FatFs-R0.16/documents/res/app3.c",
+        "FatFs-R0.16/documents/res/app4.c",
+        "FatFs-R0.16/documents/res/app5.c",
+        "FatFs-R0.16/documents/res/app6.c"
+      ],
+      "mentions": 6,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "define",
+      "files": [
+        "FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "harness/rce_demo.c"
+      ],
+      "mentions": 56,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "must",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "harness/exploit_disks.c"
+      ],
+      "mentions": 36,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "dir",
+      "files": [
+        "FatFs-R0.16/source/ff.c",
+        "FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c",
+        "harness/rce_demo.c",
+        "harness/test_harness.c"
+      ],
+      "mentions": 34,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "void",
+      "files": [
+        "FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c",
+        "harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c",
+        "harness/rce_demo.c"
+      ],
+      "mentions": 32,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "run",
+      "files": [
+        "esp32-qemu-test/app/main/fatfs_vuln_test.c",
+        "esp32-qemu-test/run.sh",
+        "esp32-qemu-test/scripts/gen_exploit_image.py",
+        "esp32-qemu-test/scripts/run_test.sh",
+        "fuzzer/main.go"
+      ],
+      "mentions": 20,
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "relations": [
+    {
+      "source": "fat",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.89,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.84,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.84,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.84,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.84,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.79,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.79,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.79,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "size",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.79,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "size",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.79,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "data",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "data",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "data",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "file",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "file",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "file",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.74,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "image",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "image",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "image",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "sector",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "sector",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "sector",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "write",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.68,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "code",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "code",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "code",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "byte",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "fat",
+      "target": "void",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/documents/res/app4.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/documents/res/app6.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffsystem.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ffunicode.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "byte",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "harness",
+      "target": "void",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h"
+      ]
+    },
+    {
+      "source": "return",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "return",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "return",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/ffunicode_stub.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "size",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "size",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.63,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "define",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "file",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "get",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "clus",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "clus",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "clus",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "data",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "data",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/diskio.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "dir",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "dir",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "dir",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "byte",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "disk",
+      "target": "void",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "entry",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "entry",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "entry",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "file",
+      "target": "fat",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "file",
+      "target": "source",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.h->FatFs-R0.16/source/ffconf.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/libfuzzer_harness.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "byte",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "read",
+      "target": "void",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/diskio.c->FatFs-R0.16/source/ff.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->FatFs-R0.16/source/ff.h",
+        "harness/diskio_ramdisk.c->harness/diskio_ramdisk.h",
+        "harness/diskio_ramdisk.h->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "root",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "root",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    },
+    {
+      "source": "root",
+      "target": "write",
+      "verb": "depends_on",
+      "strength": 0.58,
+      "confidence": "INFERRED",
+      "evidence": [
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/diskio.h",
+        "FatFs-R0.16/source/ff.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/diskio.h",
+        "harness/exploit_disks.c->FatFs-R0.16/source/ff.h",
+        "harness/exploit_disks.c->harness/diskio_ramdisk.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/diskio.h",
+        "harness/rce_demo.c->FatFs-R0.16/source/ff.h",
+        "harness/rce_demo.c->harness/diskio_ramdisk.h",
+        "harness/test_harness.c->FatFs-R0.16/source/diskio.h",
+        "harness/test_harness.c->FatFs-R0.16/source/ff.h"
+      ]
+    }
+  ],
+  "dialectic": [
+    "Thesis: `buf` centralizes 6 files; Antithesis: `byte` pulls 9 files with 4 shared (Jaccard 0.36); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `char` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `clus` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `code` pulls 8 files with 5 shared (Jaccard 0.56); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `data` pulls 8 files with 4 shared (Jaccard 0.40); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `dir` pulls 5 files with 3 shared (Jaccard 0.38); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `entries` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `entry` pulls 8 files with 4 shared (Jaccard 0.40); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `exfat` pulls 7 files with 6 shared (Jaccard 0.86); Synthesis: should they merge, split by layer, or keep `bridges` explicit?",
+    "Thesis: `buf` centralizes 6 files; Antithesis: `fat16` pulls 6 files with 4 shared (Jaccard 0.50); Synthesis: should they merge, split by layer, or keep `bridges` explicit?"
+  ]
+}
